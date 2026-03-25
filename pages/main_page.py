@@ -24,6 +24,12 @@ class MainPage(BasePages):
         cart_button = self.wait.until(EC.element_to_be_clickable(locators.PRODUCT_IMAGE_HOVER_CART)        )
         cart_button.click()
 
+    def click_proceed_to_checkout(self):
+        proceed_button = self.wait.until(EC.element_to_be_clickable(locators.PROCEED_TO_CHECKOUT_BUTTON))
+        proceed_button.click()
+        # Ждем перехода на страницу корзины
+        self.wait.until(EC.url_contains("/shop/cart"))
+
     def open_cart(self):
         self.wait.until(EC.presence_of_element_located(locators.CART_QUANTITY))
         cart_link = self.wait.until(EC.element_to_be_clickable(locators.CART_LINK))

@@ -15,3 +15,6 @@ CONTINUE_SHOPPING_BUTTON = (By.XPATH, "//button[@class='btn btn-secondary']")
 PRODUCT_TITLE_IN_CART = (By.XPATH, "//*[contains(text(), 'Customizable Desk (Steel, White)')]")
 PRODUCT_CODE_IN_CART = (By.XPATH, "(//strong[@class='product-name product_display_name'])[1]")
 PRODUCT_PRICE = (By.XPATH, "//span[@data-oe-type='monetary']//span[@class='oe_currency_value']")
+
+PROCEED_TO_CHECKOUT_BUTTON = (By.XPATH, "//button[contains(@class, 'o_sale_product_configurator_edit')]")
+
