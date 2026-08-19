@@ -1,5 +1,7 @@
 from selenium import webdriver
+from selenium.webdriver.chrome.options import Options
 import pytest
+from homework.eugene_okulik.Lesson_23.lesson_22 import options
 from pages.order_overview import OrderOverview
 from pages.products_desks import ProductsDesks
 from pages.main_page import MainPage
@@ -7,7 +9,9 @@ from pages.main_page import MainPage
 
 @pytest.fixture()
 def driver():
-    chrome_driver = webdriver.Chrome()
+    options = Options()
+    options.add_argument('--headless')
+    chrome_driver = webdriver.Chrome(options=options)
     chrome_driver.maximize_window()
     yield chrome_driver
 
