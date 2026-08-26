@@ -15,6 +15,7 @@ def driver():
     options.add_argument('--disable-gpu')
     options.add_argument('--disable-software-rasterizer')
     options.add_argument('--remote-debugging-port=9222')
+    options.add_argument('--disable-features=VizDisplayCompositor')
     chrome_driver = webdriver.Chrome(options=options)
     chrome_driver.set_page_load_timeout(30)
     chrome_driver.implicitly_wait(5)
