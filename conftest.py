@@ -17,7 +17,7 @@ def driver():
     options.add_argument('--disable-gpu')
     options.page_load_strategy = 'eager'
     chrome_driver = webdriver.Chrome(options=options)
-    chrome_driver.set_page_load_timeout(60)
+    chrome_driver.set_page_load_timeout(300)
     chrome_driver.implicitly_wait(10)
     chrome_driver.maximize_window()
     yield chrome_driver
