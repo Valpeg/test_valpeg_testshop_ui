@@ -15,6 +15,7 @@ def driver():
     options.add_argument('--no-sandbox')
     options.add_argument('--disable-dev-shm-usage')
     options.add_argument('--disable-gpu')
+    options.page_load_strategy = 'eager'
     chrome_driver = webdriver.Chrome(options=options)
     chrome_driver.set_page_load_timeout(60)
     chrome_driver.implicitly_wait(10)
