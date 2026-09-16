@@ -1,16 +1,20 @@
+import pytest
+
+
+@pytest.mark.extended
 def test_add_to_cart(products_page):
     products_page.open_page()
     products_page.add_to_cart()
     products_page.verify_cart_quantity("1")
 
-
+@pytest.mark.extended
 def test_add_to_cart_and_open_cart(products_page):
     products_page.open_page()
     products_page.add_to_cart()
     products_page.open_cart()
     products_page.verify_product_title("Office Design Software")
 
-
+@pytest.mark.extended
 def test_add_to_cart_and_checkout(products_page):
     products_page.open_page()
     products_page.add_to_cart()

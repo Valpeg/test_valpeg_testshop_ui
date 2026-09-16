@@ -1,3 +1,7 @@
+import pytest
+
+
+@pytest.mark.smoke
 def test_new_tab_one(main_page):
     main_page.open_page()
     main_page.open_product_page()
@@ -5,12 +9,14 @@ def test_new_tab_one(main_page):
     main_page.open_cart()
     main_page.verify_product_title_in_cart("Customizable Desk (Steel, White)")
 
+@pytest.mark.smoke
 def test_cart_button(main_page):
     main_page.open_page()
     main_page.hover_and_add_to_cart()
     main_page.click_proceed_to_checkout()
     main_page.verify_product_title_in_cart("Customizable Desk (Steel, White)")
 
+@pytest.mark.smoke
 def test_new_tab_two(main_page):
     main_page.open_page()
     main_page.open_product_page()
